@@ -9,11 +9,11 @@ def form():
 
 @app.route("/salvar", methods=["POST"])
 def salvar():
-    nome = request.form["nome"]
-    obra = request.form["obra"]
+    nome = request.form.get("nome")
+    obra = request.form.get("obra")
 
-    return f"✅ Dados recebidos de {nome} - {obra}"
+    return f"✅ Dados recebidos: {nome} - {obra}"
 
 if __name__ == "__main__":
     app.run()
-``
+
