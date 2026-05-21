@@ -1,15 +1,78 @@
 
 <form action="/salvar" method="post">
 
+<h2>Qualificador de Clientes</h2>
+
+<h3>Dados Básicos</h3>
+
 Nome: <input name="nome"><br><br>
 Obra: <input name="obra"><br><br>
+Cidade: <input name="cidade"><br><br>
+Estado: <input name="estado"><br><br>
 
-Cliente final:
+Mercado Vertical:
+<select name="mercado">
+  <option>Indústria</option>
+  <option>Saúde</option>
+  <option>Shopping</option>
+  <option>Office</option>
+  <option>Retail</option>
+  <option>Data Center</option>
+  <option>Educação</option>
+  <option>Residencial</option>
+</select>
+
+<h3>Qualificação</h3>
+
+<p>Área Climatizada [m²]</p>
+<select name="area">
+  <option value="0-1000">0 - 1000</option>
+  <option value="1000-5000">1000 - 5000</option>
+  <option value="+5000">(+) 5000</option>
+</select><br><br>
+
+<p>Cliente Final</p>
 <input type="radio" name="cliente_final" value="Sim">Sim
-<input type="radio" name="cliente_final" value="Não">Não
+<input type="radio" name="cliente_final" value="Não">Não<br><br>
 
-<br><br>
-<button type="submit">Salvar</button>
+<p>Órgão Público</p>
+<input type="radio" name="orgao_publico" value="Sim">Sim
+<input type="radio" name="orgao_publico" value="Não">Não<br><br>
+
+<p>Retrofit</p>
+<input type="radio" name="retrofit" value="Sim">Sim
+<input type="radio" name="retrofit" value="Não">Não<br><br>
+
+<p>Sistema atual com (+)15 anos de operação</p>
+<input type="radio" name="sistema_antigo" value="Sim">Sim
+<input type="radio" name="sistema_antigo" value="Não">Não<br><br>
+
+<p>O sistema de HVAC é crítico para o operação do empreendimento</p>
+<input type="radio" name="hvac_critico" value="Sim">Sim
+<input type="radio" name="hvac_critico" value="Não">Não<br><br>
+
+<p>Há Projeto Executivo</p>
+<input type="radio" name="projeto_executivo" value="Sim">Sim
+<input type="radio" name="projeto_executivo" value="Não">Não<br><br>
+
+<p>Há Pressão por Eficiência Energética e redução de pegada de carbono</p>
+<input type="radio" name="eficiencia" value="Sim">Sim
+<input type="radio" name="eficiencia" value="Não">Não<br><br>
+
+<p>Temos acesso aos decisores do processo por parte do cliente</p>
+<input type="radio" name="decisores" value="Sim">Sim
+<input type="radio" name="decisores" value="Não">Não<br><br>
+
+<p>Temos acesso ao time de engenharia do cliente</p>
+<input type="radio" name="engenharia" value="Sim">Sim
+<input type="radio" name="engenharia" value="Não">Não<br><br>
+
+<p>Existem instaladores participando do projeto</p>
+<input type="radio" name="instaladores" value="Sim">Sim
+<input type="radio" name="instaladores" value="Não">Não<br><br>
+
+<br>
+<button type="submit">Calcular</button>
 
 </form>
-``
+
