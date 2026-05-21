@@ -1,4 +1,13 @@
 
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)  # ✅ ESSA LINHA É OBRIGATÓRIA
+
+@app.route("/")
+def form():
+    return render_template("form.html")
+
 @app.route("/salvar", methods=["POST"])
 def salvar():
     form = request.form
@@ -51,5 +60,9 @@ def salvar():
         status = "❌ DECLINADO"
 
     return f"<h2>{status}</h2><p>{pontos} pontos</p><a href='/'>Voltar</a>"
+
+if __name__ == "__main__":
+    app.run()
+
 
 
