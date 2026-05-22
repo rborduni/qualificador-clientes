@@ -22,10 +22,10 @@ def salvar():
 
     # Perguntas
     if form.get("cliente_final") == "Sim":
-        pontos += 1
+        pontos += 500
 
     if form.get("orgao_publico") == "Não":
-        pontos += 1
+        pontos += 500
 
     if form.get("retrofit") == "Sim":
         pontos += 20
@@ -52,9 +52,9 @@ def salvar():
         pontos += 30
 
     # Classificação
-    if pontos >= 120:
+    if pontos >= 1200:
         status = "✅ QUALIFICADO"
-    elif pontos >= 70:
+    elif pontos >= 1070:
         status = "⚠️ MÉDIO POTENCIAL"
     else:
         status = "❌ DECLINADO"
